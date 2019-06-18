@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>签证加急</title>
+		<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css" />
+		<style type="text/css">
+					    .popover-content {
+		        margin: 5% 0 0 !important;
+		    }
+		}
+		.our-example{
+		    background-color: #f5f5f5;
+		}
+		.our-example-box{
+		    padding-top: 30px;
+		    padding-bottom: 30px;
+		}
+		.our-example-popover{
+		    height: 190px;
+		    padding-bottom: 0px;
+		}
+		.our-example-popover .popover{
+		    height: 160px;
+		    width: 100%;
+		    max-width: 100%;
+		    background-color: #f5f5f5;
+		    border-radius: 4px;
+		    border: 1px solid #34a263;
+		    box-shadow: none;
+		    z-index: 10;
+		
+		    position: relative;
+		    display: block;
+		    float: left;
+		    /*width: 260px;*/
+		    margin: 0px;
+		}
+		.popover.top>.arrow {
+		    border-top-color: #34a263;
+		}
+		.popover.top>.arrow:after {
+		    border-top-color: #f5f5f5 !important;
+		}
+		
+		.popover-title-touxiang {
+		    width: 100%;
+		    height: 50px;
+		    position: absolute;
+		    top: -26px;
+		    margin: 0;
+		    left: 0;
+		    text-align: center;
+		}
+		.popover-title-touxiang img {
+		    width: 50px;
+		    height: 50px;
+		    border-radius: 100%;
+		    /*border: 1px solid #34a263;*/
+		}
+		
+		.popover-content {
+		    margin: 9% 0 0;
+		}
+		.popover-content-text {
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display: -webkit-box;
+		    -webkit-line-clamp: 5;
+		    -webkit-box-orient: vertical;
+		    word-wrap: break-word;
+		    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+		}
+		.popover-content-tag {
+		    position: absolute;
+		    font-size: 12px;
+		    bottom: 12px;
+		    width: 91%;
+		}
+		.popover-content-tag .bingzhong {
+		    float: left;
+		    background-color: #aaa;
+		    color: #fff;
+		    padding: .5% 3.5%;
+		    max-width: 50%;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+		}
+		.position-address {
+		    max-width: 50%;
+		    float: right;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		}
+		.position-icon {
+		    background-image: url(../images/icons/position-icon.svg);
+		    background-repeat: no-repeat;
+		    background-size: 10px 10px;
+		    width: 10px;
+		    height: 10px;
+		    float: left;
+		    margin-top: 3px;
+		    margin-right: 4px;
+		}
+		.position-address span {
+		    color: #aaa;
+		    font-family: "SourceHanSansCN-Light","Lantinghei SC","Open Sans","Hiragino Sans GB","Microsoft YaHei","STHeiti-Light","WenQuanYi Micro Hei","Arial","SimSun","sans-serif";
+		}
+		
+		.glly-icon{
+		    width: 70px;
+		    height: 70px;
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+		.ac-figure-icon {
+		    margin-left: auto;
+		    margin-right: auto;
+		}
+				</style>
+	</head>
+
+	<body>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<script src="../js/bootstrap.min.js"></script>
+		<script src="../js/Chart.min.js"></script>
+		<script src="../js/script.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://www.clantrip.com/static/js/countUp.min.js"></script>
+		<!-- 导航栏 -->
+		<!-- <!-- 整站通用的头部及导航条 -->
+		<div id="header">
+			<nav class="navbar navbar-default navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+						 aria-expanded="false">
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" style="padding:0 0 0 15px;" href="http://www.clantrip.com"><img alt="Brand" style="max-width:130px;"
+							 src="../img/logo.png"></a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="home.html">首页</a>
+								<p class="line-top hidden-xs"></p>
+							</li>
+							<li><a href="Guidelines.html">签证指南</a></li>
+							<li class="active"><a href="Acceleration.html">签证加急</a></li>
+							<li><a href="services.html">签证服务</a></li>
+							<li><a href="information.html">签证资讯</a></li>
+							<li><a href="Data.html">资料下载</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+		<!-- 全屏轮播图 -->
+		<div id="carousel-example-generic" class="carousel slide my-slide" data-ride="carousel" interval="100">
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+			</ol>
+			<div class="carousel-inner" role="listbox">
+				<div class="item active">
+					<a target="_blank" href="">
+						<img src="../img/banner1.jpg" alt="美国签证代办">
+					</a>
+				</div>
+				<div class="item">
+					<a target="_blank" href="#">
+						<img src="../img/banner2.jpg" alt="美国签证加急预约">
+					</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- 2-3天进馆面签 -->
+		<div class="row">
+			<div class="col-md-12" style="background-color: aliceblue;height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-5" style="margin-top: 95px;">
+					<h3 class="" style="margin-bottom: 20px;"><a href="#">2-3天进馆面签</a></h3>
+					<p class="line line-big" style="width: 50px;border: 1.5px solid skyblue;"></p>
+					<h5 class="" style="color: darkgray;">无论官方排期是一个月还是两个月，找我们加急，最快第二天，第三天即可进馆面谈</h5>
+				</div>
+				<div class="col-md-3" style="margin-top: 25px;">
+					<a class="navbar-right" href="">
+						<img src="../img/sellpoint1.png">
+					</a>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
+		<!-- 多年渠道 保证成功 -->
+		<div class="row">
+			<div class="col-md-12" style="background-color: white;height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-3" style="margin-top: 25px;">
+					<a class="navbar-left" href="">
+						<img src="../img/sellpoint2.png">
+					</a>
+				</div>
+				<div class="col-md-5" style="margin-top: 95px;">
+					<h3 style="margin-bottom: 20px;"><a href="#">多年渠道 保证成功</a></h3>
+					<p class="line line-big" style="width: 70px;border: 1.5px solid skyblue;"></p>
+					<h5 style="color: darkgray;">2011年开通加急服务至今，多年从未间断，您只需要任意指定二至三个有
+						<span>效工作日备选，百分百加急成功</span></h5>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
+		<!-- 先加急 后付费 -->
+		<div class="row">
+			<div class="col-md-12" style="background-color: aliceblue;height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-5" style="margin-top: 95px;">
+					<h3 class="" style="margin-bottom: 20px;"><a href="#">先加急 后付费</a></h3>
+					<p class="line line-big" style="width: 70px;border: 1.5px solid skyblue;"></p>
+					<h5 class="" style="color: darkgray;">先安排加急 加急成功后可官方查询 合核实各项信息真实准确之后再支付服务费用 安全放心</h5>
+				</div>
+				<div class="col-md-3" style="margin-top: 25px;">
+					<a class="navbar-right" href="">
+						<img src="../img/sellpoint3.png">
+					</a>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
+		<!-- 专人审核 双重保障 -->
+		<div class="row">
+			<div class="col-md-12" style="background-color: white;height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-3" style="margin-top: 25px;">
+					<a class="navbar-left" href="">
+						<img src="../img/sellpoint4.png">
+					</a>
+				</div>
+				<div class="col-md-5" style="margin-top: 95px;">
+					<h3 style="margin-bottom: 20px;"><a href="#">专人审核 双重保障</a></h3>
+					<p class="line line-big" style="width: 70px;border: 1.5px solid skyblue;"></p>
+					<h5 style="color: darkgray;">在材料提交加急之前，专人核对关键信息 确保各项信息(如护照号，姓名，DS160确认码等)准确无误，为顺利进馆面签双重保险</h5>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
+
+		<!-- 五大领区 所有签证类型 -->
+		<div class="row">
+			<div class="col-md-12" style="background-color: aliceblue;height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-5" style="margin-top: 95px;">
+					<h3 class="" style="margin-bottom: 20px;"><a href="#">五大领区 所有签证类型</a></h3>
+					<p class="line line-big" style="width: 70px;border: 1.5px solid skyblue;"></p>
+					<h5 class="" style="color: darkgray;">北京，上海，广州，沈阳，成都五大领区均可办理加急，B1/B2商务旅游，F1留学，J1交流访问，C1过境等都可办理加急</h5>
+				</div>
+				<div class="col-md-3" style="margin-top: 25px;">
+					<a class="navbar-right" href="">
+						<img src="../img/sellpoint5.png">
+					</a>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
+		<!-- 简单材料 无需邮费 -->
+		<div class="row">
+			<div class="col-md-12" style="background-color: white;height: 300px;">
+				<div class="col-md-2"></div>
+				<div class="col-md-3" style="margin-top: 25px;">
+					<a class="navbar-left" href="">
+						<img src="../img/sellpoint6.png">
+					</a>
+				</div>
+				<div class="col-md-5" style="margin-top: 95px;">
+					<h3 style="margin-bottom: 20px;"><a href="#">简单材料 无需邮费</a></h3>
+					<p class="line line-big" style="width: 70px;border: 1.5px solid skyblue;"></p>
+					<h5 style="color: darkgray;">仅需提供电子材料版本材料和申请加急，无需邮寄任何原件，方便快捷</h5>
+				</div>
+				<div class="col-md-2"></div>
+			</div>
+		</div>
+
+		<!-- 签证流程 -->
+		<div class="row" style="color: white;background-color: #1E90FF;margin-bottom: 10px;">
+			<div class="col-md-12">
+				<div class="col-md-3"></div>
+				<div class="col-md-6 text-center" style="margin-bottom: 10px;">
+					<h3><small style="color: white;">签证流程:<a href="" style="color: white;">填写DS160表>>></a><a href="" style="color: white;">缴纳签证费>>></a>
+							<a href="" style="color: white;">预约面试时间>>></a><a href="" style="color: white;">尽管面谈>>></a><a href="" style="color: white;">取护照</a></small></h3>
+				</div>
+				<div class="col-md-3"></div>
+			</div>
+		</div>
+
+		<!-- 美国签证加急流程 -->
+		<div class="urgent-row urgent-chat">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="col-md-2"></div>
+						<div class="col-md-3">
+							<h2>加急流程</h2>
+							<p class="line line-big" style="width: 70px;border: 1.5px solid skyblue;"></p>
+							<p>还未填表缴费的申请人请直接咨询客服</p>
+							<ol>
+								<li>提供护照首页扫描件和DS160确认页</li>
+								<li>与客服预订期望面谈的日期</li>
+								<li>我方上报加急, 申请人准备面谈材料</li>
+								<li>加急成功, 回传预约确认单</li>
+								<li>申请人核实无误后付款</li>
+							</ol>
+							<a class="btn btn-lg btn-primary web-chat">在线咨询</a>
+							<a class="btn btn-lg btn-default" target="_blank" href="#">QQ咨询</a>
+						</div>
+						<div class="col-md-5">
+								<img src="../img/dq.png"  style="height: 300px;margin-top: 0px;">
+						</div>
+						<div class="col-md-2"></div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 美国签证加急流程 -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		<!-- 客户的鼓励 -->
+				<div class="index-row our-example" style="background-color: #FAFAFA	;">
+		    <div class="container">
+		        <div class="row">
+		            <div class="col-md-12 main-title">
+		                <h2 class="text-center" style="margin-top: 60px;">客户的鼓励</h2>
+		
+		                <hr style="width: 70px;border: 1.5px solid 	#00BFFF;">
+		
+		                <h2 class="text-center">
+		                    <small>帮助您解决实际问题，顺利、及时地获得签证，是我们存在的根本价值。</small>
+		                </h2>
+		            </div>
+		            <div class="col-sm-4 our-example-box">
+		                <div class="our-example-popover">
+		                    <div class="popover top">
+		                        <div class="arrow"></div>
+		                        <h3 class="popover-title-touxiang">
+		                            <img src="http://www.clantrip.com/static/images/pingjia1.jpg">
+		                        </h3>
+		
+		                        <div class="popover-content">
+		                            <p class="popover-content-text">
+		                                护照丢了，定了春节行程。11号补好护照约了13号面签，这速度简直惊人，所有的旅行社都说弄不了，来不及了，肯定没戏。多亏了你们，非常感谢！</p>
+		
+		                            <div class="popover-content-tag">
+		                                <span class="bingzhong">B1商务签证</span>
+		
+		                                <div class="position-address">
+		                                    <figure class="position-icon"></figure>
+		                                    <span>北京领事馆</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <img src="../img/12.png" style="margin-left: 115px;">
+		            </div>
+		            <div class="col-sm-4 our-example-box">
+		                <div class="our-example-popover">
+		                    <div class="popover top">
+		                        <div class="arrow"></div>
+		                        <h3 class="popover-title-touxiang">
+		                            <img src="http://www.clantrip.com/static/images/pingjia2.jpg">
+		                        </h3>
+		
+		                        <div class="popover-content">
+		                            <p class="popover-content-text">
+		                                因为我情况很特殊也很难办，白本加多次拒签。感谢你们为我做详细的分析与方案，这次签证终于过了！本来都做好心理准备再拒我就彻底放弃的。谢谢你们！</p>
+		
+		                            <div class="popover-content-tag">
+		                                <span class="bingzhong">B2旅游签证</span>
+		
+		                                <div class="position-address">
+		                                    <figure class="position-icon"></figure>
+		                                    <span>广州领事馆</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <img src="../img/12.png"  style="margin-left: 115px;">
+		            </div>
+		            <div class="col-sm-4 our-example-box">
+		                <div class="our-example-popover">
+		                    <div class="popover top">
+		                        <div class="arrow"></div>
+		                        <h3 class="popover-title-touxiang">
+		                            <img src="http://www.clantrip.com/static/images/pingjia3.jpg">
+		                        </h3>
+		
+		                        <div class="popover-content">
+		                            <p class="popover-content-text">
+		                                同学推荐过来的，马上就要开学了，加上去年成绩不并理想。多亏你们帮我插队面签，分析面签问题，非常专业。现在签证已经拿到了，我会再介绍同学来。</p>
+		
+		                            <div class="popover-content-tag">
+		                                <span class="bingzhong">F1留学签证</span>
+		
+		                                <div class="position-address">
+		                                    <figure class="position-icon"></figure>
+		                                    <span>上海领事馆</span>
+		                                </div>
+		                            </div>
+		                        </div>
+		                    </div>
+		                </div>
+		                <img src="../img/12.png" style="margin-left: 115px;">
+		            </div>
+		
+		            <div class="clearfix"></div>
+		        </div>
+		    </div>
+		</div>
+		<!-- 客户的鼓励 -->
+
+
+		<!-- 我们的客户 -->
+		<div class="index-row our-service" style="background-color: #E8E8E8;height: 400px;">
+			<div class="container-default">
+				<div class="row">
+					<div class="col-sm-12 main-title">
+						<h2 class="text-center" style="margin-top: 60px;">我们的客户</h2>
+						<hr style="width: 70px;border: 1.5px solid 	#00BFFF;">
+						<h4 class="text-center">
+							<small>他们与中岚建立了合作关系</small>
+						</h4>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client1.png" alt="#">
+								</a>
+							</div>
+
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client2.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client3.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client4.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client5.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client6.png" alt="#">
+								</a>
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+					<div class="col-md-12">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client7.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client8.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client9.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client10.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client11.png" alt="#">
+								</a>
+							</div>
+							<div class="col-xs-2">
+								<a class="thumbnail" href="">
+									<img class="media-object" src="../img/client12.png" alt="#">
+								</a>
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 通用页脚 -->
+		<div style="background-color: black;">
+			<div class="container-default">
+				<div class="row">
+					<div class="col-md-12" style="color: white;margin-top: 30px;">
+						<div class="col-md-2"></div>
+						<div class="col-md-8">
+							<div class="col-xs-2">
+								<div class="footer-list" style="border-left: 2px solid white;">
+									<h5 class="text-center">常用工具</h5>
+									<ul style="list-style: none;">
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">电码查询</a></p>
+										</li>
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">护照追踪</a></p>
+										</li>
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">资料下载</a></p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="footer-list" style="border-left: 2px solid white;">
+									<h5 class="text-center">快捷裢接</h5>
+									<ul style="list-style: none;">
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">签证资讯</a></p>
+										</li>
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">签证指南</a></p>
+										</li>
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">常见问题</a></p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="footer-list" style="border-left: 2px solid white;">
+									<h5 class="text-center">关于我们</h5>
+									<ul style="list-style: none;">
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">关于中岚</a></p>
+										</li>
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">服务协议</a></p>
+										</li>
+										<li>
+											<p><a href="#" style="color: white;font-size: 11px;">收藏本站</a></p>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xs-2">
+								<div class="text-center" style="border-left: 2px solid white;margin-left: 10px;">
+									<img class="img-responsive " src="http://www.clantrip.com/static/images/wechat.png" style="margin-left: 15px;">
+									<p style="margin-left: 20px;">微信<sapn class="hidden-sm">号:</sapn>clanus</p>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="navbar-left" style="border-left: 2px solid white;border-right: 2px solid white;">
+									<h2 style="font-size: 20px;margin-top: 0px;"><img src="http://www.clantrip.com/static/images/icons/pc-footer-phone.png"
+										 style="width: 30px;height: 30px;">010-64648731</h2>
+									<h2 style="font-size: 20px;margin-top: 0px;"><img src="http://www.clantrip.com/static/images/icons/pc-footer-qq.png"
+										 style="width: 30px;height: 30px;">54350970</h2>
+									<h2 style="font-size: 20px;margin-top: 0px;"><img src="http://www.clantrip.com/static/images/icons/pc-footer-mob.png"
+										 style="width: 30px;height: 30px;">18810888729</h2>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-2"></div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div style="background-color: dimgray;color: white;">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<p class="text-center">Copyright © 2006-2019 clantrip.com All Rights Reversed. 中岚签证 <a target="_blank" href="http://www.miitbeian.gov.cn/"
+							 style="color: white;">京ICP备16015317号</a></p>
+
+						<div style="width:300px;margin:0 auto; padding:20px 0; text-align: center;">
+							<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102002687" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;">
+								<img src="http://www.clantrip.com/static/images/ghs.png" style="float:left;" />
+								<p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#fafafa;">京公网安备
+									11010102002687号</p>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 通用页脚 -->
+
+	</body>
+</html>
